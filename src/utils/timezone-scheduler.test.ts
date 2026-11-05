@@ -62,13 +62,13 @@ test('buildIcsCalendarContent generates RFC 5545 calendar event', () => {
     userEmail: 'test@example.com',
     clientTimezone: 'America/New_York',
     utcIso: '2026-11-06T14:00:00.000Z',
-    googleCalendarUrl: 'https://calendar.app.google/9m3GmWy9GGJgfMWx9',
+    googleCalendarUrl: 'https://calendar.app.google/NKJVuN2ajnxuMyQC9',
   });
 
   assert.ok(ics.includes('BEGIN:VCALENDAR'));
   assert.ok(ics.includes('DTSTART:20261106T140000Z'));
   assert.ok(ics.includes('DTEND:20261106T142500Z'));
   assert.ok(ics.includes('test@example.com'));
-  assert.ok(ics.includes('https://calendar.app.google/9m3GmWy9GGJgfMWx9'));
+  assert.ok(ics.includes('https://calendar.app.google/NKJVuN2ajnxuMyQC9'));
   assert.ok(ics.includes('END:VCALENDAR'));
 });

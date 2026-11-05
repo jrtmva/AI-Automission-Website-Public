@@ -114,7 +114,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     'Custom AI agents & autonomous digital coworkers',
   ];
 
-  const GOOGLE_CALENDAR_URL = 'https://calendar.app.google/9m3GmWy9GGJgfMWx9';
+  const GOOGLE_CALENDAR_URL = 'https://calendar.app.google/NKJVuN2ajnxuMyQC9';
 
   const handleNextStep = (e: React.FormEvent) => {
     e.preventDefault();

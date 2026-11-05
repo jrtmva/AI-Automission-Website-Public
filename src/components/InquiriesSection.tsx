@@ -74,7 +74,7 @@ export const InquiriesSection: React.FC<InquiriesSectionProps> = ({ onOpenBookin
     {
       platform: 'Google Calendar',
       handle: 'Direct 1-on-1 Consultation',
-      url: 'https://calendar.app.google/9m3GmWy9GGJgfMWx9',
+      url: 'https://calendar.app.google/NKJVuN2ajnxuMyQC9',
       description: 'Reserve an exact 25-minute strategy video slot with automated Google Meet calendar invitation.',
       badge: 'Live Sync',
       badgeColor: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',

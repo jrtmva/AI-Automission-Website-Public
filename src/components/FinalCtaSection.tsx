@@ -48,7 +48,7 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ onOpenBooking 
             </button>
 
             <a
-              href="https://calendar.app.google/9m3GmWy9GGJgfMWx9"
+              href="https://calendar.app.google/NKJVuN2ajnxuMyQC9"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-xs uppercase tracking-wider bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex items-center justify-center gap-2 transition-all"
