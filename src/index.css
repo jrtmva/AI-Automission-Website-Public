@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-tech: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #060913;
+    color: #F1F5F9;
+    overflow-x: hidden;
+  }
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Cybernetic Neon Background Grid & Glows */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+}
+
+.circuit-overlay {
+  background-image: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.12), transparent 50%),
+                    radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.10), transparent 40%),
+                    radial-gradient(circle at 15% 70%, rgba(234, 179, 8, 0.08), transparent 45%);
+}
+
+/* Gold Metallic Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0B3 0%, #F5C518 35%, #D4AF37 70%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #F59E0B 0%, #FDE68A 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyber-gradient {
+  background: linear-gradient(135deg, #38BDF8 0%, #A855F7 60%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Neon Glow Utilities */
+.glow-gold {
+  box-shadow: 0 0 25px -4px rgba(245, 158, 11, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.45);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -4px rgba(168, 85, 247, 0.45);
+}
+
+.border-circuit-gold {
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.border-circuit-cyan {
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.border-circuit-purple {
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+/* Bright Neon Light Glows */
+.neon-glow-cyan {
+  filter: drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 8px #00F0FF) drop-shadow(0 0 20px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 35px rgba(6, 182, 212, 0.5));
+}
+
+.neon-glow-purple {
+  filter: drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 8px #D946EF) drop-shadow(0 0 20px rgba(217, 70, 239, 0.85)) drop-shadow(0 0 35px rgba(168, 85, 247, 0.5));
+}
+
+.neon-glow-gold {
+  filter: drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 8px #F59E0B) drop-shadow(0 0 20px rgba(245, 158, 11, 0.85)) drop-shadow(0 0 35px rgba(217, 119, 6, 0.5));
+}
+
+/* Cyber Circuit Animations */
+@keyframes cyberPulse {
+  0%, 100% {
+    opacity: 0.75;
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px currentColor) drop-shadow(0 0 28px currentColor);
+  }
+}
+
+@keyframes circuitFlow {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circuitFlowReverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 600;
+  }
+}
+
+@keyframes streamMoveRight {
+  0% {
+    transform: translate3d(-420px, 0, 0);
+    opacity: 0;
+  }
+  4% {
+    opacity: 0.95;
+  }
+  96% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(calc(100vw + 420px), 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes streamMoveLeft {
+  0% {
+    transform: translate3d(calc(100vw + 420px), 0, 0);
+    opacity: 0;
+  }
+  4% {
+    opacity: 0.95;
+  }
+  96% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(-420px, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes continuousGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes continuousGradientFlowReverse {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes beamScanX {
+  0% {
+    transform: translate3d(-350px, 0, 0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(calc(100vw + 350px), 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes beamScanReverse {
+  0% {
+    transform: translate3d(calc(100vw + 350px), 0, 0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-350px, 0, 0);
+    opacity: 0;
+  }
+}
+
+.animate-stream-fast {
+  animation: streamMoveRight 5.5s linear infinite;
+}
+
+.animate-stream-medium {
+  animation: streamMoveRight 8.5s linear infinite;
+}
+
+.animate-stream-slow {
+  animation: streamMoveRight 13s linear infinite;
+}
+
+.animate-stream-reverse {
+  animation: streamMoveLeft 9.5s linear infinite;
+}
+
+.animate-stream-reverse-fast {
+  animation: streamMoveLeft 6.5s linear infinite;
+}
+
+.animate-continuous-flow {
+  background-size: 200% 100%;
+  animation: continuousGradientFlow 6s linear infinite;
+}
+
+.animate-continuous-flow-slow {
+  background-size: 200% 100%;
+  animation: continuousGradientFlow 10s linear infinite;
+}
+
+.animate-circuit-flow {
+  animation: circuitFlow 4s linear infinite;
+}
+
+.animate-circuit-flow-slow {
+  animation: circuitFlow 8s linear infinite;
+}
+
+.animate-circuit-flow-reverse {
+  animation: circuitFlowReverse 5s linear infinite;
+}
+
+.animate-cyber-pulse {
+  animation: cyberPulse 2.5s ease-in-out infinite;
+}
+
+.animate-beam-scan {
+  animation: beamScanX 5s linear infinite;
+}
+
+.animate-beam-scan-slow {
+  animation: beamScanX 8s linear infinite;
+}
+
+.animate-beam-scan-reverse {
+  animation: beamScanReverse 6.5s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
